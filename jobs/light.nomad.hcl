@@ -1,3 +1,9 @@
+variable "url" {
+  type        = string
+  description = "Url of your light"
+  default     = ""
+}
+
 variable "turn" {
   type        = string
   description = "Turn the light on or off"
@@ -28,7 +34,7 @@ job "SetLight" {
       }
       config {
         command = "local/shelly/shellymgr"
-        args    = ["-turn", "${var.turn}", "-mode", var.mode, "-color", var.color]
+        args    = ["-url", "${var.url}", "-turn", "${var.turn}", "-mode", var.mode, "-color", var.color]
       }
     }
   }
