@@ -7,7 +7,7 @@ This demo showcases Nomads ability to run diverse workloads on a cluster. Specif
 * [Shelly Bulb RGB](https://www.shelly.com/en-de/products/product-overview/shelly-duo-rgbw)
 
 ## Software
-* [nomad 1.7.2](https://releases.hashicorp.com/nomad/)
+* [Nomad 1.7.2](https://releases.hashicorp.com/nomad/)
 * [Demo Magic](https://github.com/paxtonhare/demo-magic/tree/master)
 
 ## Setup
