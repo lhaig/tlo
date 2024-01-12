@@ -13,11 +13,8 @@ This demo showcases Nomads ability to run diverse workloads on a cluster. Specif
 ## Setup
 
 Clone the repo
-```
+```bash
 git clone git@github.com:lhaig/tlo.git
-```
-
-```
 cd tlo
 ```
 
