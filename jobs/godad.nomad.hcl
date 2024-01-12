@@ -31,15 +31,18 @@ job "godad-webapp" {
 
     task "server" {
       artifact {
-        source      = "https://www.haigmail.com/gitl/godadarm.tar.gz"
+        source      = "https://github.com/lhaig/godad/releases/download/v0.0.1/godad-v0.0.1-linux-arm64.tar.gz"
         destination = "local/godad/"
+        options {
+          checksum = "md5:3c5e8aa8222a6a67c2c710e12f75f2b6"
+        }
       }
 
       action "godad" {
-        command = "local/godad/godadarm"
+        command = "local/godad/godad"
         args    = [
           "-c ",
-          "local/godad/godadarm | nomad var -force put nomad/jobs/godad-webapp godad=-"
+          "local/godad/godad | nomad var -force put nomad/jobs/godad-webapp godad=-"
         ]
       }
 

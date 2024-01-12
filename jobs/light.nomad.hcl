@@ -29,8 +29,11 @@ job "SetLight" {
     task "getshelly" {
       driver = "exec"
       artifact {
-        source      = "https://www.haigmail.com/gitl/shellymgr.tar.gz"
+        source      = "https://github.com/lhaig/shellymgr/releases/download/v0.0.1/shellymgr-v0.0.1-linux-arm64.tar.gz"
         destination = "local/shelly/"
+        options {
+          checksum = "md5:89ad3b44cc1907383585811f7d55ee97"
+        }
       }
       config {
         command = "local/shelly/shellymgr"
